@@ -15,5 +15,8 @@ Classes
 - Scraper
 
 
-- get some scraped data
+- get some scraped pages
 - allow user to select a different page number
+- get some brand names
+- allow user to select a brand name
+- allow user to select a new brand name/page
