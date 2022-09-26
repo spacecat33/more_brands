@@ -16,8 +16,10 @@ class MoreBrands::CLI
 
     def get_available_pages
         # to be scraped instead
+        MoreBrands::Page.new("page 1")
+        MoreBrands::Page.new("page 2")
+        MoreBrands::Page.new("page 3")
         @pages = MoreBrands::Page.all
-
     end
 
     def list_pages
@@ -25,7 +27,7 @@ class MoreBrands::CLI
         puts "Choose a page to see a list of brands"
         puts ""
         @pages.each.with_index(1) do |page, index| 
-        puts "#{index} #{page}"
+        puts "#{index} #{page.number}"
         end
         # puts 'Do you want to see page 1?'
     end
@@ -42,7 +44,7 @@ class MoreBrands::CLI
 
     def show_page_for(chosen_page)
         page = @pages[chosen_page - 1]
-        puts "Here are the results for your chosen page #{page}"
+        puts "Here are the results for your chosen page #{page.number}"
         # to implement
         # MoreBrands::Brands.all.each.with_index(1) do | brand |
         #     puts brand.name
@@ -53,13 +55,16 @@ class MoreBrands::CLI
     # # should the code below be put in its own class called Brand?
     def get_brands_for_page
         # to be scraped instead
+        MoreBrands::Brand.new("brand 1")
+        MoreBrands::Brand.new("brand 2")
+        MoreBrands::Brand.new("brand 3")
         @brands = MoreBrands::Brand.all
     end
 
     def list_brands
         # list_brands
         @brands.each.with_index(1) do |brand, index| 
-        puts "#{index} #{brand}"
+        puts "#{index} #{brand.name}"
         end
     end
 
@@ -71,7 +76,7 @@ class MoreBrands::CLI
 
     def show_brand_for(chosen_brand)
         brand = @brands[chosen_brand - 1]
-        puts "Here are the results for your chosen brand which is #{brand}"
+        puts "Here are the results for your chosen brand which is #{brand.name}"
         # to implement
         # MoreBrands::Cigars.all.each.with_index(1) do | cigar |
         #     puts cigar.name
