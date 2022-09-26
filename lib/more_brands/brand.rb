@@ -1,5 +1,5 @@
 class MoreBrands::Brand
-    @@all = []
+    @@all = ["BF", "BG", "BH", "BI", "BJ"]
 
     attr_accessor :name
 
@@ -11,7 +11,7 @@ class MoreBrands::Brand
     def self.all
         @@all
     end
-
+    
     def save
         @@all << self
     end

@@ -3,7 +3,7 @@ class MoreBrands::Page
 
     attr_accessor :number
 
-    def initialize(number)
+    def initialize(number) # default to = 1?
         @number = number
         save
     end

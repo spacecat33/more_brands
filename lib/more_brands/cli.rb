@@ -16,9 +16,6 @@ class MoreBrands::CLI
 
     def get_available_pages
         # to be scraped instead
-        MoreBrands::Page.new("page 1")
-        MoreBrands::Page.new("page 2")
-        MoreBrands::Page.new("page 3")
         @pages = MoreBrands::Page.all
     end
 
@@ -55,9 +52,6 @@ class MoreBrands::CLI
     # # should the code below be put in its own class called Brand?
     def get_brands_for_page
         # to be scraped instead
-        MoreBrands::Brand.new("brand 1")
-        MoreBrands::Brand.new("brand 2")
-        MoreBrands::Brand.new("brand 3")
         @brands = MoreBrands::Brand.all
     end
 
